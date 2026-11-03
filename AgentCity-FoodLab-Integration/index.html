@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgentCity + FoodLab</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; background: #eef3ed; color: #263b35; font-family: "Segoe UI", Arial, sans-serif; }
+    main { width: min(760px, 100%); padding: 34px; border-radius: 22px; background: white; box-shadow: 0 16px 50px #263b3514; }
+    .eyebrow { color: #728477; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; }
+    h1 { margin: 8px 0; font-size: clamp(28px, 5vw, 42px); }
+    p { line-height: 1.6; color: #6b796f; }
+    .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 28px; }
+    a { display: block; padding: 22px; border: 1px solid #e0e9df; border-radius: 16px; color: inherit; text-decoration: none; }
+    a:hover { background: #f4f8f3; border-color: #9dbba2; }
+    a strong { display: block; margin: 8px 0; font-size: 19px; }
+    a span { font-size: 13px; color: #738176; }
+    .note { margin-top: 25px; padding: 13px 15px; border-radius: 10px; background: #f2f7f1; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">YOUR CONNECTED PROJECT WORKSPACE</p>
+    <h1>🏙️ AgentCity + 🍳 FoodLab</h1>
+    <p>Open either project below. Both apps are inside one workspace so they can exchange recipe tasks in this browser.</p>
+    <div class="apps">
+      <a href="AgentCity/index.html"><strong>🏙️ Open AgentCity</strong><span>View the city, employees and incoming restaurant tasks →</span></a>
+      <a href="FoodLab/index.html"><strong>🍳 Open FoodLab</strong><span>Choose a recipe and send it to the restaurant chef →</span></a>
+      <a href="ELearn/index.html"><strong>🎓 Open CodeLearn</strong><span>Learn to code and ask the software team for practice material →</span></a>
+    </div>
+    <p class="note">Important: open this page with VS Code Live Server. Do not open the HTML files directly from File Explorer. The two apps need the same local server address to share tasks.</p>
+  </main>
+</body>
+</html>

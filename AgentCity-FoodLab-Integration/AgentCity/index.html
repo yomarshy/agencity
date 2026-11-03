@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgentCity — Virtual AI City</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">YOUR VIRTUAL WORLD</p>
+      <h1>🏙️ AgentCity</h1>
+      <p class="subtitle">A little city with big ideas.</p>
+    </div>
+    <div class="topbar-right">
+      <span class="live-dot" id="simulation-status">SIMULATION RUNNING</span>
+      <a class="control-button" href="../ELearn/index.html" target="elearn-tab" style="text-decoration:none">🎓 CodeLearn</a>
+      <button id="toggle-simulation" class="control-button">Pause city</button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="city-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE WORLD</p>
+          <h2>City overview</h2>
+        </div>
+        <span class="city-size">5 BUSINESSES · 4 CITIZENS</span>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="city-canvas" width="1000" height="640"
+          aria-label="Isometric cartoon city with five businesses and moving people"></canvas>
+      </div>
+      <div class="legend">
+        <span><i class="legend-building"></i> Businesses</span>
+        <span><i class="legend-person"></i> People moving around</span>
+        <span>💡 Select a building to inspect it</span>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <section class="info-card">
+        <p class="eyebrow">BUSINESS DETAILS</p>
+        <div class="business-title">
+          <span id="business-emoji" class="business-emoji">🏢</span>
+          <div>
+            <h2 id="business-name">Software company</h2>
+            <p id="business-type">Technology</p>
+          </div>
+        </div>
+        <p id="business-description" class="description"></p>
+        <div class="divider"></div>
+        <p class="eyebrow">EMPLOYEES</p>
+        <p class="helper-text">Select an employee to inspect their work.</p>
+        <div id="employee-list" class="employee-list"></div>
+      </section>
+
+      <section class="info-card agent-card">
+        <p class="eyebrow">EMPLOYEE WORKSPACE</p>
+        <h2 id="agent-name">Select an employee</h2>
+        <p id="agent-role" class="agent-role">Their role will appear here.</p>
+        <div class="agent-detail">
+          <span>Current state</span>
+          <strong id="agent-state">—</strong>
+        </div>
+        <div class="agent-detail">
+          <span>Current task</span>
+          <strong id="agent-task">Choose an employee to see their task.</strong>
+        </div>
+        <button id="assign-task" class="control-button task-button" disabled>Assign next task</button>
+        <p class="prototype-note">These are simulated employees and tasks, not real AI agents yet.</p>
+      </section>
+
+      <section class="info-card foodlab-card">
+        <p class="eyebrow">CONNECTED APP · FOODLAB</p>
+        <div class="foodlab-heading">
+          <h2>Restaurant orders</h2>
+          <span id="foodlab-order-count" class="order-count">0</span>
+        </div>
+        <p class="helper-text">Recipes sent from your FoodLab website appear here.</p>
+        <div id="foodlab-order-list" class="foodlab-order-list">
+          <p class="no-orders">No FoodLab tasks yet. Send a recipe from FoodLab to get started.</p>
+        </div>
+      </section>
+
+      <section class="info-card foodlab-card">
+        <p class="eyebrow">CONNECTED APP · CODELEARN</p>
+        <div class="foodlab-heading">
+          <h2>Software team tasks</h2>
+          <span id="elearn-task-count" class="order-count">0</span>
+        </div>
+        <p class="helper-text">Coding requests from the CodeLearn e-learning site go to Mia Chen, the developer.</p>
+        <div id="elearn-task-list" class="foodlab-order-list">
+          <p class="no-orders">No coding tasks yet.</p>
+        </div>
+        <p class="helper-text" id="elearn-origin"></p>
+      </section>
+
+      <section class="info-card activity-card">
+        <p class="eyebrow">CITY ACTIVITY</p>
+        <h2>What's happening?</h2>
+        <div id="activity-list" class="activity-list">
+          <div class="activity-item"><span>🚶</span><p><b>City simulation</b><small>People are moving around the city.</small></p></div>
+          <div class="activity-item"><span>🏢</span><p><b>Businesses opened</b><small>Five businesses are ready for their teams.</small></p></div>
+          <div class="activity-item"><span>👋</span><p><b>Welcome!</b><small>Choose a building and an employee.</small></p></div>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="elearn.js"></script>
+</body>
+</html>

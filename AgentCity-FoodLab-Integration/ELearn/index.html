@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeLearn | E-learning</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <p class="eyebrow">E-LEARNING · CODED BY AGENTCITY</p>
+    <h1>🎓 CodeLearn</h1>
+    <p>Learn web basics, and ask the AgentCity software team to code new practice material.</p>
+  </div>
+  <a class="btn" href="../AgentCity/index.html" target="agentcity-tab">🏙️ Open AgentCity</a>
+</header>
+<main>
+  <section>
+    <div class="bar"><span id="progress-text"></span><div class="track"><i id="progress-fill"></i></div></div>
+    <div id="courses"></div>
+  </section>
+  <aside>
+    <h2>Software team</h2>
+    <p class="hint">Mia Chen (Developer) picks these up in AgentCity. She is simulated, not a real AI yet.</p>
+    <form id="req-form">
+      <input id="req-input" placeholder="e.g. Build a quiz page for Flexbox" maxlength="80" required>
+      <button type="submit">Send to developer</button>
+    </form>
+    <div id="tasks"></div>
+    <div id="preview-box" hidden>
+      <button type="button" id="preview-close" class="ask">Close preview</button>
+      <iframe id="preview" sandbox="allow-scripts" title="Result from Mia"></iframe>
+    </div>
+    <p id="origin" class="hint"></p>
+  </aside>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

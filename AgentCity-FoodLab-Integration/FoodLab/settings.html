@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | FoodLab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">FoodLab<span>.</span></a>
+
+            <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div id="site-menu" class="site-menu" hidden>
+                <a href="index.html#top" class="menu-link">⌂ Home</a>
+                <a href="index.html#recipes" class="menu-link">🍽 Recipes</a>
+                <a href="index.html#favorites" class="menu-link">❤ Favorites</a>
+                <a href="../AgentCity/index.html" class="menu-link">🏙 AgentCity</a>
+                <a href="../ELearn/index.html" class="menu-link">🎓 CodeLearn</a>
+    <a href="settings.html" class="menu-link">⚙ Settings</a>
+                <span class="menu-link menu-coming-soon" aria-disabled="true">
+                    ◷ Cooking History <small>Coming soon</small>
+                </span>
+            </div>
+            
+        </nav>
+    </header>
+
+    <!-- Settings page -->
+    <main class="settings-page">
+
+        <div class="settings-header">
+            <p class="eyebrow">MAKE IT YOURS</p>
+            <h1>Settings ⚙️</h1>
+            <p>Customize your FoodLab experience.</p>
+        </div>
+
+        <!-- Appearance settings -->
+        <section class="settings-group">
+            <h2>Appearance</h2>
+
+            <div class="settings-row">
+                <div>
+                    <h3>Dark theme</h3>
+                    <p>Pull the chain down to change the theme.</p>
+                </div>
+
+                
+    <div class="pull-chain-control" id="pull-chain-control">
+        <div class="chain-pendulum" id="chain-pendulum">
+
+            <div class="chain-line" id="chain-line">
+                <span class="chain-bead"></span>
+                <span class="chain-bead"></span>
+                <span class="chain-bead"></span>
+                <span class="chain-bead"></span>
+                <span class="chain-bead"></span>
+                <span class="chain-bead"></span>
+                <span class="chain-bead"></span>
+                <span class="chain-bead"></span>
+            </div>
+
+            <button
+                type="button"
+                id="pull-chain"
+                class="chain-handle"
+                aria-label="Pull chain to toggle dark mode"
+                aria-pressed="false"
+                title="Drag the chain down"
+            >☾</button>
+
+        </div>
+
+        <input type="checkbox" id="dark-mode-toggle" hidden>
+    </div>
+        </section>
+
+        <!-- Cooking preferences -->
+        <section class="settings-group">
+            <h2>Cooking Preferences</h2>
+
+            <div class="settings-row">
+                <div>
+                    <h3>Favorite cuisine</h3>
+                    <p>Choose the type of food you enjoy.</p>
+                </div>
+
+                <select id="cuisine-setting">
+                    <option value="all">All cuisines</option>
+                    <option value="indian">Indian</option>
+                    <option value="italian">Italian</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="settings-group">
+            <h2>About FoodLab</h2>
+
+            <div class="settings-row">
+                <div>
+                    <h3>FoodLab 🍳</h3>
+                    <p>Your little kitchen for discovering delicious recipes.</p>
+                </div>
+            </div>
+
+            <p id="settings-status" role="status" aria-live="polite">
+                Your preferences are ready.
+            </p>
+        </section>
+
+        <!-- Back to home -->
+        <div style="margin-top: 30px;">
+            <a href="index.html" class="nav-link">← Back to Home</a>
+        </div>
+
+    </main>
+
+    <script src="settings.js"></script>
+
+</body>
+</html>
